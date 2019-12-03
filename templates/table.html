@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+
+{% block title %} PAGE 2 {% endblock %}
+
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <p class="lead text-center">Your word search has been created.</p>
+    </div>
+</div>
+
+<br>
+<br>
+<div class="container">
+    <table class="table table-responsive">
+
+        {% for row in grid %}
+        <tr>
+            {% for letter in row %}
+            <td>{{ letter }}</td>
+
+            {% endfor %}
+        </tr>
+        {% endfor %}
+
+    </table>
+</div>
+{% endblock %}
+
+
